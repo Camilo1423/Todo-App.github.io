@@ -1,22 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { app } from "./firebase.js";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  deleteDoc,
-  getDoc,
-  updateDoc,
-  doc,
-  onSnapshot
-} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, getDoc, updateDoc, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore.js";
 
 // inicializacion de authentication
 const auth = getAuth();
@@ -48,6 +33,7 @@ signIn.addEventListener("submit", (e) => {
       containerApp.classList.remove("addHide")
       btnIn.classList.add("addHide")
       btnUp.classList.add("addHide")
+      window.location.href = './src/views/task.html'
       Swal.fire({
         position: "Center",
         icon: "success",
@@ -113,6 +99,7 @@ logout.addEventListener("click", (e) => {
     btnIn.classList.remove("addHide");
     btnUp.classList.remove("addHide");
     logout.classList.add("addHide");
+    window.location.href = '../../index.html'
     containerApp.classList.add("addHide")
     Swal.fire({
       position: "Center",

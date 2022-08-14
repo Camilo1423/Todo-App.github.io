@@ -1,12 +1,4 @@
-import {
-  auth,
-  onAuthStateChanged,
-  saveCollection,
-  onGetTask,
-  deleteTask,
-  getTask,
-  updataTask
-} from "./auth.js";
+import { auth, onAuthStateChanged, saveCollection, onGetTask, deleteTask, getTask, updataTask } from "./auth.js";
 
 const taskContainer = document.querySelector(".taskContainer");
 const logout = document.querySelector("#btn-logout");
@@ -47,6 +39,7 @@ onAuthStateChanged(auth, async (user) => {
           `;
       });
       taskContainer.innerHTML = html;
+      // Eliminar un registro
       const bntDeleteTask = taskContainer.querySelectorAll(".btnEndTask");
       bntDeleteTask.forEach((btn) => {
         btn.addEventListener(
@@ -76,15 +69,12 @@ onAuthStateChanged(auth, async (user) => {
           }
         );
       });
+      // activar la actualizacion de datos en el form
       const btnEditTask = taskContainer.querySelectorAll(".btnEditTask");
       btnEditTask.forEach((btn) => {
         btn.addEventListener(
           "click",
-          async ({
-            target: {
-              dataset: { id },
-            },
-          }) => {
+          async ({ target: { dataset: { id }, }}) => {
             const getTasks = await getTask(uid, id);
             const data = getTasks.data();
             title.value = data.titleToDo;
@@ -101,7 +91,7 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-// guardar datos en la db
+// Actualizar datos en la db || Guardar un nuevo registro en la db
 onAuthStateChanged(auth, (user) => {
   if (user) {
     btnCrear.addEventListener("submit", (e) => {

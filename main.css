@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 .navContainer {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     height: 60px;
-    padding: 1rem;
+    padding: 1rem 3rem;
     border-radius: 20px;
     color: #212529;
     box-shadow: 0px 10px 30px rgba(209, 209, 209, 0.5);
+}
+
+.regulateNav {
+    width: 100%;
+    height: 80px;
 }
 
 .titleNav {
@@ -83,7 +91,7 @@
     width: 100%;
     height: 30%;
     background-color: white;
-    margin-bottom: 3rem;
+    margin-bottom: 10%;
     border-radius: 15px;
 
 }
@@ -108,7 +116,7 @@ h3 {
 .parrafos {
     color: white;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 10%;
 }
 
 a {
@@ -130,4 +138,34 @@ a {
 ::-webkit-scrollbar-thumb {
     background: #212529;
     transition: 0.3s;
+}
+
+.homePage {
+    padding-top: 10rem;
+    width: 100%;
+    height: 1000px;
+    background-image: url('./src/assets/img/blog-body-bg.png');
+}
+
+.homePage__info h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.colorTitle {
+    color: #7B7D7D;
+}
+
+.parrafoHomePage {
+    color: #212529;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 0;
 }
