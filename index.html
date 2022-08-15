@@ -19,14 +19,11 @@
             <a href="#">Home</a>
             <a href="#">About Us</a>
             <a href="#">Collab</a>
-            <button type="button" class="btn btn-outline-dark me-3" id="signIn-btn" data-bs-toggle="modal" data-bs-target="#signIn">Iniciar Sesion</button>
-            <button type="button" class="btn btn-outline-dark me-3" id="signUp-btn" data-bs-toggle="modal" data-bs-target="#signUp">Registrarme</button>
-            <button type="button" class="btn btn-dark addHide" id="btn-logout">Salir</button>
         </nav>
         <div class="iconsSocial">
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.linkedin.com/in/andr%C3%A9s-roa-9981ba169/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Camilo1423" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/taurodev/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
         </div>
     </header>
 
@@ -37,94 +34,14 @@
                 <h2 class="colorTitle">para gestionar tus tareas</h2>
                 <p class="parrafoHomePage mt-4">Detras de cada persona exitosa está la capacidad de respetar y administrar su tiempo</p>
                 <p class="parrafoHomePage">para lograr sus metas. Esto es lo que hacemos en Smile Task 🎉</p>
+                <div class="btnContanier">
+                    <button type="button" class="btnSignUp" id="signUp-btn">Registrate</button>
+                    <button type="button" class="btnSignIn" id="signIn-btn">Iniciar Sesion</button>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- main app todo -->
-    <main class="container addHide" id="containerApp">
-        <div class="contentApp">
-            <div class="userContainer shadow">
-                <div class="contentInfo">
-
-                </div>
-                <div class="formContent">
-                    <h3 class="">Crea tu tarea</h3>
-                    <form id="createTask">
-                        <div class="input-group input-group-lg mb-3">
-                            <input type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="ingresa el titulo de tu tarea" id="title">
-                        </div>
-                        <div class="form-floating ">
-                            <textarea class="description" placeholder="Descripción de tu tarea" id="floatingTextarea2" style="height: 120px" ></textarea>
-                        </div>
-                        <button class="input-group-text btn btn-light btnFormTask" id="inputGroup-sizing-lg" type="submit">Crear</button>
-                    </form>
-                </div>
-                <div class="info">
-                    <p class="parrafos">Muchas gracias por seleccionarnos para gestionar tu tiempo y tus actividades diarias, seguiremos dando soporte y agregando mas actualizaciones con más funcionalidades y mejorando la experiencia de usuario</p>
-                    <p class="parrafos">Dev by <a href="#">Tauro Dev</a></p>
-                </div>
-            </div>
-            <div class="taskContainer"></div>
-        </div>
-    </main>
-
-    <!-- main modal sign in -->
-    <div class="modal fade" id="signIn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Entrar a la App! :)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="signIn-form">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Email"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" id="signInEmail"
-                                required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Password"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" id="signInPassword"
-                                required>
-                        </div>
-                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-dark">Iniciar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- main modal sign up -->
-    <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registrarme a la App!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="signUp-form">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Email"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" id="signUpEmail"
-                                required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Password"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2" id="signUpPassword"
-                                required>
-                        </div>
-                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-dark">Registrarme</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- script de jquery para mejorar la UIX -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -135,11 +52,6 @@
     <!-- script sweetalert2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- script main -->
-    <script type="module" src="./src/assets/js/firebase.js"></script>
-    <script type="module" src="./src/assets/js/auth.js"></script>
-    <script type="module" src="./src/assets/js/readFirestore.js"></script>
-    <script type="module" src="./src/assets/js/createTask.js"></script>
     <script type="module" src="./main.js"></script>
 </body>
-
 </html>

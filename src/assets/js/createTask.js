@@ -16,8 +16,6 @@ onAuthStateChanged(auth, async (user) => {
     const btnIn = document.querySelector("#signIn-btn");
     const btnUp = document.querySelector("#signUp-btn");
     const containerApp = document.querySelector('#containerApp')
-    btnIn.classList.add("addHide");
-    btnUp.classList.add("addHide");
     containerApp.classList.remove('addHide')
     logout.classList.remove("addHide");
     // User is signed in, see docs for a list of available properties

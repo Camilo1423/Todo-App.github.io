@@ -18,41 +18,6 @@ const signIn = document.querySelector("#signIn-form");
 const logout = document.querySelector("#btn-logout");
 const containerApp = document.querySelector('#containerApp')
 
-// inicion de sesion
-signIn.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const email = document.querySelector("#signInEmail").value;
-  const password = document.querySelector("#signInPassword").value;
-  const btnIn = document.querySelector("#signIn-btn");
-  const btnUp = document.querySelector("#signUp-btn");
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      $("#signIn").modal("hide");
-      signIn.reset();
-      logout.classList.remove("addHide")
-      containerApp.classList.remove("addHide")
-      btnIn.classList.add("addHide")
-      btnUp.classList.add("addHide")
-      window.location.href = './src/views/task.html'
-      Swal.fire({
-        position: "Center",
-        icon: "success",
-        title: "Sesión iniciada :D",
-        showConfirmButton: false,
-        timer: 2500,
-      });
-    })
-    .catch((res) => {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Algo anda mal con tus credenciales!",
-        showConfirmButton: false,
-        timer: 2500,
-      });
-    });
-});
-
 // registro de usuarios
 signUp.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -94,10 +59,6 @@ signUp.addEventListener("submit", (e) => {
 logout.addEventListener("click", (e) => {
   e.preventDefault();
   auth.signOut().then(() => {
-    const btnIn = document.querySelector("#signIn-btn");
-    const btnUp = document.querySelector("#signUp-btn");
-    btnIn.classList.remove("addHide");
-    btnUp.classList.remove("addHide");
     logout.classList.add("addHide");
     window.location.href = '../../index.html'
     containerApp.classList.add("addHide")
