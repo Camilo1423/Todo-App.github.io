@@ -1,9 +1,27 @@
+/* Incorporacion de fuentes css import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+/* variables css */
+:root {
+    /* incorporacion de colores principales de la aplicacion */
+    --tone-color-black: #242424;
+    --tone-color-white: #EEEEEE;
+    --tone-color-background: #F6F6F6;
+    
+    /* incorporacion de colores en rgba para las sombras */
+    --tone-shadow: rgba(209, 209, 209, 0.5);
+
+    /* estilos para font weight  */
+    
+
+}
+
 
 .navContainer {
     position: fixed;
     width: 100%;
-    background-color: #fff;
+    background-color: white;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
