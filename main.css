@@ -47,6 +47,11 @@ li {
 
 button {
     cursor: pointer;
+    padding: .8rem 2.2rem;
+    margin: 0 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
 }
 
 
@@ -137,4 +142,30 @@ h2 {
 
 .cHomePage-parrafo {
     font-size: 1.2rem;
+    font-weight: var(--fnt-semiBold);
+}
+
+.cHomePage-btns {
+    margin-top: 2rem;
+}
+
+/* btn registrar */
+
+.btnSignUp {
+    background-color: var(--tone-color-background);
+    border: 1px solid var(--tone-color-black);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.btnSignUp:hover {
+    background-color: var(--tone-color-black);
+    color: var(--tone-color-white);
+}
+
+/* btn iniciar sesion */
+.btnSignIn {
+    background-color: var(--tone-color-black);
+    border-radius: 20px;
+    color: var(--tone-color-white);
 }
